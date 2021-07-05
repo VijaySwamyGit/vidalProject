@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="VIDAL-VIJAY-TestSuite">
+
+	<listeners>
+        <listener class-name="com.qa.vidalhealth.ExtentReportListner.ExtentReporterNG" />
+    </listeners>
+    
+  <test name="Preauth-Regression-TestCases 1" preserve-order='true'>
+    <classes>
+    
+       
+       <class name="com.qa.vidalhealth.TestScripts.ManualCaseAssignmentTest"/>
+       
+     <class name="com.qa.vidalhealth.TestScripts.RegularPreauthorizationGEDTest"/>
+       <class name="com.qa.vidalhealth.TestScripts.ManualPreAuthMedicalTest"/>
+      <class name="com.qa.vidalhealth.TestScripts.PreauthTariffTest"/>
+      
+      <class name="com.qa.vidalhealth.TestScripts.PreauthAuthorisationTest">
+      
+      <methods>
+             <exclude name="reject_PreauthAuthorisationTest"></exclude>
+             <exclude name="requiredInformation_PreauthAuthorisationTest"></exclude>
+             <include name="approve_PreauthAuthorisationTest_withResolveDiscrepancies"></include>
+             <exclude name="approve_PreauthAuthorisationTest_withoutResolveDiscrepancies"></exclude>    
+          	</methods>
+     </class>
+     
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

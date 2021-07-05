@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite for PA">
+
+
+
+<listeners>
+        <listener class-name="com.qa.vidalhealth.FrameWorkListners.ExtentReporterNG" />
+        <listener class-name="com.qa.vidalhealth.FrameWorkListners.FailedCaseScreenShotsListener" />
+</listeners>
+
+    <test name="LoginPage" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.LoginPageTest"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="HomePage" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.HomePageTest"></class>
+    </classes>
+  </test> <!-- Test -->
+    
+    
+    
+    
+  <test name="Preauth-Regression-TestCase APPROVE PA" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest"/>
+       	<class name="com.qa.vidalhealth.TestScripts.PreAuthMedicalTest"/>
+      	<class name="com.qa.vidalhealth.TestScripts.PreauthTariffTest"/>
+      	
+      	<class name="com.qa.vidalhealth.TestScripts.PreauthAuthorisationTest">
+      		<methods>
+             	<exclude name="reject_PreauthAuthorisationTest"></exclude>
+             	<exclude name="requiredInformation_PreauthAuthorisationTest"></exclude>
+             	<include name="approve_PreauthAuthorisationTest"></include>    
+      		</methods>
+     	</class>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+  
+  
+  <test name="Preauth-Regression-TestCase ENHANCE PA" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.EnhancePreAuthTest"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+   <!-- Test -->
+    <test name="Preauth-Regression-TestCase PA APPROVED LETTER GENERATION" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.PreauthStatusLetterGenerationTest">
+       		<methods>
+       			<exclude name="preauth_Rejection_StatusLetterGeneration"></exclude>
+            	<exclude name="preauth_Cancel_StatusLetterGeneration"></exclude>
+            	<include name="preauth_Approve_StatusLetterGeneration"></include>  
+        	</methods>
+        </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  
+
+  
+  
+    <test name="Preauth-Regression-TestCase REJECT PA" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest"/>
+       	<class name="com.qa.vidalhealth.TestScripts.PreAuthMedicalTest"/>
+      	<class name="com.qa.vidalhealth.TestScripts.PreauthTariffTest"/>
+      	
+      	<class name="com.qa.vidalhealth.TestScripts.PreauthAuthorisationTest">
+      		<methods>
+             	<include name="reject_PreauthAuthorisationTest"></include>
+             	<exclude name="requiredInformation_PreauthAuthorisationTest"></exclude>
+             	<exclude name="approve_PreauthAuthorisationTest"></exclude>    
+      		</methods>
+     	</class>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Preauth-Regression-TestCase PA Shortfall" preserve-order='true'>
+    <classes>
+       	<class name="com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest"/>
+       	<class name="com.qa.vidalhealth.TestScripts.PreauthSupportDocShortfallTest">
+     	</class>
+     
+    </classes>
+  </test> <!-- Test -->
+  
+
+  
+  
+  
+</suite> <!-- Suite -->

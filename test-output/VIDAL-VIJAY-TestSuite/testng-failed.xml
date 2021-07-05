@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [VIDAL-VIJAY-TestSuite]">
+  <listeners>
+    <listener class-name="com.qa.vidalhealth.ExtentReportListner.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="5" name="Preauth-Regression-TestCases 1(failed)">
+    <classes>
+      <class name="com.qa.vidalhealth.TestScripts.PreauthTariffTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="PreauthTariffTest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.PreauthTariffTest -->
+      <class name="com.qa.vidalhealth.TestScripts.RegularPreauthorizationGEDTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="regularPreauthorizationTest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.RegularPreauthorizationGEDTest -->
+      <class name="com.qa.vidalhealth.TestScripts.ManualPreAuthMedicalTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="initialization"/>
+          <include name="ManualPreAuthMedicalTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.ManualPreAuthMedicalTest -->
+      <class name="com.qa.vidalhealth.TestScripts.ManualCaseAssignmentTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="assignCaseManuallyWhichCreatedManuallyTest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.ManualCaseAssignmentTest -->
+    </classes>
+  </test> <!-- Preauth-Regression-TestCases 1(failed) -->
+</suite> <!-- Failed suite [VIDAL-VIJAY-TestSuite] -->

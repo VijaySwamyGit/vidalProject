@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Suite for PA]">
+  <listeners>
+    <listener class-name="com.qa.vidalhealth.FrameWorkListners.ExtentReporterNG"/>
+    <listener class-name="com.qa.vidalhealth.FrameWorkListners.FailedCaseScreenShotsListener"/>
+  </listeners>
+  <test thread-count="5" name="LoginPage(failed)">
+    <classes>
+      <class name="com.qa.vidalhealth.TestScripts.LoginPageTest">
+        <methods>
+          <include name="loginPageTitleTest"/>
+          <include name="autoReport_MailTrigger"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.LoginPageTest -->
+    </classes>
+  </test> <!-- LoginPage(failed) -->
+  <test thread-count="5" name="Preauth-Regression-TestCase PA APPROVED LETTER GENERATION(failed)">
+    <classes>
+      <class name="com.qa.vidalhealth.TestScripts.PreauthStatusLetterGenerationTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="preauth_Approve_StatusLetterGeneration"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.PreauthStatusLetterGenerationTest -->
+    </classes>
+  </test> <!-- Preauth-Regression-TestCase PA APPROVED LETTER GENERATION(failed) -->
+  <test thread-count="5" name="Preauth-Regression-TestCase REJECT PA(failed)">
+    <classes>
+      <class name="com.qa.vidalhealth.TestScripts.PreAuthMedicalTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="initialization"/>
+          <include name="ManualPreAuthMedicalTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.PreAuthMedicalTest -->
+      <class name="com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="initialization"/>
+          <include name="preauthGEDTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest -->
+      <class name="com.qa.vidalhealth.TestScripts.PreauthTariffTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="PreauthTariffTest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.PreauthTariffTest -->
+    </classes>
+  </test> <!-- Preauth-Regression-TestCase REJECT PA(failed) -->
+  <test thread-count="5" name="Preauth-Regression-TestCase PA Shortfall(failed)">
+    <classes>
+      <class name="com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="initialization"/>
+          <include name="preauthGEDTest"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.RegularPreAuthGEDTest -->
+      <class name="com.qa.vidalhealth.TestScripts.PreauthSupportDocShortfallTest">
+        <methods>
+          <include name="autoReport_MailTrigger"/>
+          <include name="PreauthMultipleOpenShortfallTest"/>
+          <include name="PreauthOpenNRespondShortfallTest"/>
+          <include name="PreauthOpenShortfallTest"/>
+          <include name="closeShortfallTest"/>
+          <include name="PreauthOpenNOverrideShortfallTest"/>
+          <include name="PreauthOpenNcloseShortfallTest"/>
+          <include name="initialization"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.qa.vidalhealth.TestScripts.PreauthSupportDocShortfallTest -->
+    </classes>
+  </test> <!-- Preauth-Regression-TestCase PA Shortfall(failed) -->
+</suite> <!-- Failed suite [Test Suite for PA] -->
